@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 
 interface Pokemon {
@@ -15,7 +16,7 @@ export default function Pokemones() {
   useEffect(() => {
     
     const obtenerDatos = async () => {
-      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1301");
+      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=50");
       const data = await res.json();
 
       const detalles = await Promise.all(
@@ -38,9 +39,9 @@ export default function Pokemones() {
   }, []);
 
   return (
- 
+  
     
-    <ul className="grid grid-cols-4 grid-rows-6 gap-[5px]">
+    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[5px] h-[100vh] overflow-y-scroll scrollbar-hide">
   {loading ? (
     <li className="col-span-4 row-span-6 flex items-center justify-center">
       
@@ -71,7 +72,7 @@ export default function Pokemones() {
         <li
           key={index}
           className={`border border-indigo-400 text-center justify-center rounded-[5px] p-2 ${hoverClass} ${
-            index <= 1 ? "col-span-2 row-span-2" : ""
+            index <= 1 ? "lg:col-span-2 lg:row-span-2" : ""
           }`}
         >
           <p className="m-auto w-[200px] border-b-[1px] border-blue-200 capitalize">
@@ -79,7 +80,7 @@ export default function Pokemones() {
           </p>
           <img
             className=" m-auto transition-transform duration-300 hover:scale-125 hover:rotate-6"
-            src={pokemon.sprite}
+             src={pokemon.sprite || "./pokebola.png"}
             alt={pokemon.name}
             width={100}
             height={100}
