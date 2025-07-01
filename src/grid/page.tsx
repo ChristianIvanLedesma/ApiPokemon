@@ -1,4 +1,4 @@
-
+import "../app.css"
 import { useEffect, useState } from "react";
 
 interface Pokemon {
