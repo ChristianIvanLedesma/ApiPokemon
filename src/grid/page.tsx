@@ -39,9 +39,10 @@ export default function Pokemones() {
   }, []);
 
   return (
+   <>
   
-    
-    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[5px] h-[100vh] overflow-y-scroll scrollbar-hide">
+    <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[5px] h-[100vh] overflow-y-scroll scrollbar-hide">
+      
   {loading ? (
     <li className="col-span-4 row-span-6 flex items-center justify-center">
       
@@ -91,7 +92,7 @@ export default function Pokemones() {
     })
   )}
 </ul>
-
+</>
   );
   
 }
