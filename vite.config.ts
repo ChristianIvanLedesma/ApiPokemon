@@ -6,6 +6,10 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),tailwindcss()],
   base: '/ApiPokemon/',
+  test: {
+    globals: true,
+    environment: 'jsdom', // necesario para pruebas de React
+  },
 })
 
 
