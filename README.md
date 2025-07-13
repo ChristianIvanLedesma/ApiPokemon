@@ -35,12 +35,6 @@ Aplicación web que muestra una grilla responsiva de Pokémon usando la PokeAPI.
    npm run build
    ```
 
-## Deploy en GitHub Pages
-1. Asegúrate de que las imágenes estén en la carpeta `public` antes de hacer build.
-2. Usa rutas absolutas con el nombre del repo para imágenes (ej: `/ApiPokemon/titulo.png`).
-3. Sube el contenido de `dist` a la rama configurada para GitHub Pages.
-
-
 ---
 Desarrollado por Christian Ivan Ledesma
 # React + TypeScript + Vite
